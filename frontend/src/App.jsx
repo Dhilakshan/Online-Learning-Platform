@@ -86,10 +86,10 @@ function App() {
         }
       >
         <Routes>
+          <Route path="/login" element={<Login setAuth={setAuth} />} />
           <Route path="/register" element={<Register setAuth={setAuth} />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/reset-password" element={<ResetPassword />} />
-          <Route path="/login" element={<Login setAuth={setAuth} />} />
           <Route path="/courses" element={<CourseList />} />
           <Route path="/enrolled" element={<EnrolledCourses />} />
           <Route

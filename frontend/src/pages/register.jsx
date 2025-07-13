@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./Register.css";
 import { getUserRole } from "../common-function/token";
@@ -165,7 +165,7 @@ export default function Register({ setAuth }) {
         {success && <p className="success">{success}</p>}
 
         <p className="login-link">
-          Already have an account? <a href="/login">Sign in</a>
+          Already have an account? <Link href="/login">Sign in</Link>
         </p>
       </form>
     </div>
