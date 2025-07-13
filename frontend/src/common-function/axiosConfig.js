@@ -3,7 +3,7 @@ import { getToken, getRefreshToken } from "./token";
 
 // Create axios instance
 const api = axios.create({
-  baseURL: "http://localhost:5000/api",
+  baseURL: "https://online-learning-platform-be.onrender.com/api",
   timeout: 10000,
 });
 
@@ -46,7 +46,7 @@ api.interceptors.response.use(
 
         // Try to refresh the token
         const response = await axios.post(
-          "http://localhost:5000/api/auth/refresh",
+          "https://online-learning-platform-be.onrender.com/api/auth/refresh",
           {
             refreshToken: refreshToken,
           }

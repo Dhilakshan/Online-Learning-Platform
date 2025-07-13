@@ -28,7 +28,7 @@ export default function Register({ setAuth }) {
     setLoading(true);
     try {
       const { data } = await axios.post(
-        "http://localhost:5000/api/auth/register",
+        "https://online-learning-platform-be.onrender.com/api/auth/register",
         form
       );
       if (data) {

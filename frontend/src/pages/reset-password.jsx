@@ -38,7 +38,7 @@ export default function ResetPassword() {
     setSuccess("");
     try {
       const { data } = await axios.post(
-        "http://localhost:5000/api/auth/reset-password",
+        "https://online-learning-platform-be.onrender.com/api/auth/reset-password",
         { token, password }
       );
       setSuccess(data.message || "Password reset successfully!");

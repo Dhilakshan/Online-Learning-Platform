@@ -17,7 +17,7 @@ export default function Login({ setAuth }) {
     setError("");
     try {
       const { data } = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        "https://online-learning-platform-be.onrender.com/api/auth/login",
         { email, password }
       );
 

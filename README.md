@@ -164,7 +164,7 @@ This creates an admin user with:
 ### 5. Access the Application
 
 - Frontend: http://localhost:5173
-- Backend API: http://localhost:5000
+- Backend API: https://online-learning-platform-be.onrender.com
 
 ## 📚 API Documentation
 
@@ -308,7 +308,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      "/api": "http://localhost:5000",
+      "/api": "https://online-learning-platform-be.onrender.com",
     },
   },
 });
@@ -345,12 +345,12 @@ Use tools like Postman or curl to test all endpoints:
 
 ```bash
 # Test registration
-curl -X POST http://localhost:5000/api/auth/register \
+curl -X POST https://online-learning-platform-be.onrender.com/api/auth/register \
   -H "Content-Type: application/json" \
   -d '{"username":"test","email":"test@test.com","password":"password123","role":"student"}'
 
 # Test login
-curl -X POST http://localhost:5000/api/auth/login \
+curl -X POST https://online-learning-platform-be.onrender.com/api/auth/login \
   -H "Content-Type: application/json" \
   -d '{"email":"test@test.com","password":"password123"}'
 ```

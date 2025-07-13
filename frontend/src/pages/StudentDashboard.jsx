@@ -3,6 +3,7 @@ import axios from "axios";
 import LoadingSpinner from "../components/LoadingSpinner";
 import Login from "./login";
 import { getUserRole } from "../common-function/token";
+import api from "../common-function/axiosConfig";
 
 const StudentDashboard = ({ setAuth }) => {
   const [enrolledCourses, setEnrolledCourses] = useState([]);
@@ -16,8 +17,8 @@ const StudentDashboard = ({ setAuth }) => {
     const fetchEnrolledCourses = async () => {
       setLoading(true);
       try {
-        const res = await axios.get(
-          "http://localhost:5000/api/courses/enrolled",
+        const res = await api.get(
+          "/courses/enrolled",
           {
             headers: { Authorization: `Bearer ${token}` },
           }
